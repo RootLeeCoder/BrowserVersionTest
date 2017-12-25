@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>浏览器检测</title>
+</head>
+<body>
+<script type="text/javascript">
+    var userAgent=navigator.userAgent.toLowerCase(), s, o = {};   
+    var browser={
+        version:(userAgent.match(/(?:firefox|opera|safari|chrome|msie)[\/: ]([\d.]+)/))[1],
+        safari:/version.+safari/.test(userAgent),
+        chrome:/chrome/.test(userAgent),
+        firefox:/firefox/.test(userAgent),
+        ie:/msie/.test(userAgent),
+        opera: /opera/.test(userAgent ) 
+    } /* 获得浏览器的名称及版本信息 */
+
+    if (browser.ie)
+    {
+      document.writeln("<p>您使用的是IE "+browser.version+"<\/p>");
+    }
+    
+    if (browser.safari)
+    {
+      document.writeln("<p>您使用的是safari "+browser.version+"<\/p>");
+    }
+    
+    if (browser.chrome)
+    {
+      document.writeln("<p>您使用的是chrome "+browser.version+"<\/p>");
+    }
+    
+    if (browser.firefox)
+    {
+      document.writeln("<p>您使用的是firefox "+browser.version+"<\/p>");
+    }
+    
+    if (browser.opera)
+    {
+      document.writeln("<p>您使用的是opera "+browser.version+"<\/p>");
+    }
+    
+</script>
+</body>
+</html>
